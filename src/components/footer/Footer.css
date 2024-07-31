@@ -1,0 +1,65 @@
+footer {
+   position: relative;
+   bottom: 0;
+   width: 100%;
+   height: auto;
+   margin-top: 2rem;
+}
+
+.footer-contacts h3{
+   margin-top: 3rem;
+}
+
+.footer-contacts li{
+   margin-top: 3rem;
+   list-style: none;
+   font-size: 1;
+}
+
+.footer-contacts a{
+   text-decoration: none;
+   color: black;
+}
+
+.footer-contacts i{
+   font-size: 2rem;
+}
+
+.footer-schedule{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.footer-schedule h3{
+   margin-top: 3rem;
+}
+
+.footer-contacts ul li p{
+   font-size: 1.6rem;
+}
+
+.footer-schedule table{
+   margin-top: 3rem;
+   width: 80%;
+}
+
+.footer-schedule table thead{
+   font-size: 1.5rem;
+}
+
+.footer-schedule table tbody{
+   font-size: 1.3rem;
+}
+
+.table-success{
+   font-weight: 700;
+}
+
+.footer-map h3{
+   margin-top: 3rem;
+}
+
+.footer-map iframe{
+   margin-top: 3rem;
+}

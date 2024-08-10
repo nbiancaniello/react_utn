@@ -1,24 +1,52 @@
 footer {
-   position: relative;
-   bottom: 0;
+   height: 45vh; 
+   background-color: #91d2952a;
    width: 100%;
-   height: auto;
-   margin-top: 2rem;
+   color: #27542ade;
+ }
+
+ /* change in media query */
+ /* height: 45vh;  */
+
+
+.footer-content{
+   display: flex;
+   flex-direction: row;
+   align-items: flex-start;
+}
+
+.footer-contacts{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 20%;
+   flex-direction: column;
+   align-content: center;
+   align-items: center;
+}
+
+.footer-contacts-item{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 1px;
+   gap: 10px;
 }
 
 .footer-contacts h3{
    margin-top: 3rem;
+   font-size: 2rem;
 }
 
 .footer-contacts li{
    margin-top: 3rem;
    list-style: none;
-   font-size: 1;
 }
 
 .footer-contacts a{
    text-decoration: none;
-   color: black;
+   color: #27542ade;
 }
 
 .footer-contacts i{
@@ -29,27 +57,33 @@ footer {
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   width: 40%;
 }
 
 .footer-schedule h3{
+   font-size: 2rem;
    margin-top: 3rem;
 }
 
-.footer-contacts ul li p{
+.footer-contacts ul li{
    font-size: 1.6rem;
 }
 
 .footer-schedule table{
    margin-top: 3rem;
-   width: 80%;
+   width: 60%;
 }
 
 .footer-schedule table thead{
    font-size: 1.5rem;
+   text-align: center;
 }
 
 .footer-schedule table tbody{
    font-size: 1.3rem;
+   text-align: center;
 }
 
 .table-success{
@@ -60,6 +94,56 @@ footer {
    margin-top: 3rem;
 }
 
-.footer-map iframe{
+.footer-map {
+   display: flex;
+   justify-content: center;
    margin-top: 3rem;
+   width: 30%;
+}
+
+@media (max-width: 768px) {
+   .footer-content {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .footer-contacts,
+   .footer-schedule,
+   .footer-map {
+      width: 100%;
+      margin-bottom: 2rem;
+   }
+
+   .footer-contacts,
+   .footer-schedule,
+   .footer-map {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .footer-contacts-item {
+      margin-bottom: 1rem;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .footer-schedule table {
+      width: 100%;
+   }
+
+   .footer-schedule table thead,
+   .footer-schedule table tbody {
+      font-size: 1rem;
+   }
+
+   .footer-map {
+      width: 100%;
+      margin-top: 1rem;
+   }
+
+   iframe {
+      width: 70%;
+      height: 100%;
+   }
 }

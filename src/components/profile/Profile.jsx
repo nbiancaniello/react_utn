@@ -1,6 +1,6 @@
 import { Alert } from "react-bootstrap";
 
-function Orders() {
+function Profile() {
    return (
       <>
          <Alert variant="info">
@@ -10,4 +10,4 @@ function Orders() {
    );
 }
 
-export default Orders;
+export default Profile;

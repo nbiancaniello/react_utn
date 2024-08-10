@@ -3,5 +3,8 @@
    flex-wrap: wrap;
    flex-direction: column;
    justify-content: center;
-   align-items: center;
+   align-items: flex-start;
 }
+
+/* in media query, use center */
+/* align-items: flex-start; */

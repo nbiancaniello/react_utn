@@ -6,16 +6,16 @@ function Contact() {
       <div className="col footer-contacts">
          <h3>Contacto</h3>
          <ul>
-            <li>
-               <FontAwesomeIcon icon={faPhone} />
+            <li className='footer-contacts-item'>
+               <FontAwesomeIcon size="xl" icon={faPhone} />
                <p>4667-3223</p>
             </li>
-            <li>
-               <FontAwesomeIcon icon={faWhatsapp} />
+            <li className='footer-contacts-item'>
+               <FontAwesomeIcon size="xl" icon={faWhatsapp} />
                <p>114667-3223</p>
             </li>
-            <li>
-               <FontAwesomeIcon icon={faInstagram} />
+            <li className='footer-contacts-item'>
+               <FontAwesomeIcon size="xl" icon={faInstagram} />
                <p><a href="https://www.instagram.com/autoserviciomiguelangel/"> autoserviciomiguelangel</a>
                </p>
             </li>

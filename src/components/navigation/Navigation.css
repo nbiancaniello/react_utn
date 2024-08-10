@@ -1,19 +1,45 @@
 nav{
-   font-size: 1.7rem;
+   font-size: 1.5rem;
+   /* border-bottom: 1px solid #66a46a2a; */
+   background-color: #91d2952a;
+   /* background: linear-gradient(to bottom, #66a46a2a, #ffffff); */
 }
 
-#btnSearch{
-   width: 125px;
-   margin-right: 0.2rem;
+.nav-container{
+   width: 100%;
+   height: 5vh;
 }
 
-#btnCart, #btnUser{
+#user-profile, #search-button, #shop-cart{
+   display: flex;
+   font-size: 1.3rem;
    margin: 0rem 0.2rem;
-   width: 150px;
+   justify-content: space-around;
+   font-weight: bold;
+   align-items: center;
+   color: #27542ade;
+   background-color: white;
+   border: none;
+   transition: 0.3s;
+}
+
+#user-profile:hover, #search-button:hover, #shop-cart:hover{
+   background-color: #578b5be0;
+   color: white;
+}
+
+#shop-cart{
+   width: 250px;
+}
+
+#offcanvasNavbarDropdown{
+   color: #27542ade;
 }
 
 .dropdown-item {
-   font-size: 1.7rem;
+   font-size: 1.5rem;
+   color: #27542ade;
+
 }
 
 .dropdown-menu li {
@@ -31,19 +57,4 @@ nav{
 }
 .dropdown-menu > li:hover > .dropdown-submenu {
    display: block;
-}
-
-#navbarSupportedContent form input{
-   font-size: 1.7rem;
-}
-
-#navbarSupportedContent form button{
-   font-size: 1.7rem;
-}
-
-.nav-link-btn{
-   font-size: 1.8rem;
-   width: 10rem;
-   padding: 0.3rem;
-   margin: 0rem 0.2rem;
 }

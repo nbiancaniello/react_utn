@@ -1,6 +1,21 @@
-function Schedule() {  
+import { useEffect } from "react";
+
+function Schedule() {
+   useEffect(() => {
+      let dayIx = new Date().getDay(); // 0 is Sunday
+      dayIx = dayIx === 0 ? 6 : dayIx - 1; // Monday (0) is first in week
+   
+      let rows = document.querySelector('#calendar').querySelectorAll('tbody tr');
+      let rowIx = 0;
+      rows.forEach(row => {
+         if (rowIx === dayIx)
+         row.classList.add('table-success');
+         rowIx++;
+      })
+   });
+
    return (
-      <div className="col-4 footer-schedule">
+      <div className="footer-schedule">
          <h3>Horario de Atención</h3>
          <table id="calendar" className="table">
             <thead>
@@ -42,6 +57,6 @@ function Schedule() {
          </table>
       </div>
    );
-};
+}
 
 export default Schedule;

@@ -1,26 +1,35 @@
-import React, { useState } from 'react';
-import CartList from './CartList';
-import CartControl from './CartControl';
-import CartForm from './CartForm';
+import './ShoppingCart.css';
+import ShoppingCartItem from './ShoppingCartItem';
+import { useCart } from '../cart/CartProvider';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faShopSlash} from '@fortawesome/free-solid-svg-icons/faShopSlash';
+import HorizontalRule from './HorizontalRule';
 
 const ShoppingCart = () => {
-   const [items, setItems] = useState([]);
+  const { items, totalCost } = useCart(); 
 
-   const addItem = (item) => {
-      setItems([...items, item]);
-   };
-
-   const removeItem = (id) => {
-      setItems(items.filter(item => item.id !== id));
-   };
-
-   return (
-      <div>
-         <CartList items={items} onRemoveItem={removeItem} />
-         <CartControl items={items} />
-         <CartForm onAddItem={addItem} />
+  return (
+    <>
+      <h2> Carrito de Compras </h2>
+      <div className='shopping-cart'>
+          {items.length === 0 &&
+          <div className='empty-cart'>
+            <FontAwesomeIcon size='10x' icon={faShopSlash} />
+            <p>No hay items en el carrito</p>
+          </div>}
+          {items.map((item) => (
+            <ShoppingCartItem key={item.id} id={item.id} description={item.description} price={item.price} qty={item.qty} image={item.image} />
+          ))
+          
+          }
+          {items.length !== 0 &&
+          <HorizontalRule/>}
+          {items.length !== 0 && 
+          <p className='shopping-cart-total'>Total: ${totalCost}</p>}
       </div>
-   );
+    </>
+    
+  );
 };
 
 export default ShoppingCart;

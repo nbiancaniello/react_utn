@@ -1,15 +1,15 @@
 import Contact from "../contact/Contact";
+import MapEmbed from "../mapEmbed/MapEmbed";
 import Schedule from "../schedule/Schedule";
 import './Footer.css'
 
 function Footer() {
    return (
-      <footer className="bg-body-secondary">
-         <div className="container-fluid text-center footer-content">
-            <div className="row footer-row">
-               <Contact />
-               <Schedule />
-            </div>
+      <footer>
+         <div className="footer-content">
+            <Contact />
+            <Schedule />
+            <MapEmbed />
          </div>
       </footer>
    );

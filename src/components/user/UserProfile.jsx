@@ -1,5 +1,4 @@
 import Form from 'react-bootstrap/Form';
-import { useState } from 'react';
 import Col from 'react-bootstrap/Col';
 import { Alert } from 'react-bootstrap';
 import './User.css';

@@ -5,6 +5,17 @@ import { useCart } from '../cart/CartProvider';
 function ShoppingCartUserDetails() {
    const[selectedOption, setSelectedOption] = useState('option-delivery');
    const { emptyCart } = useCart();
+   // const [validated, setValidated] = useState(false);
+
+   // const handleSubmit = (event) => {
+   //    const form = event.currentTarget;
+   //    if (form.checkValidity() === false) {
+   //       event.preventDefault();
+   //       event.stopPropagation();
+   //    }
+
+   //    setValidated(true);
+   // };
 
    const handleOptionChange = (event) => {
       setSelectedOption(event.target.id);
@@ -13,6 +24,7 @@ function ShoppingCartUserDetails() {
    const handleFormSubmit = () => {
       emptyCart();
    };
+   
 
    return (
       <Form id='shopping-cart-user-details'>
@@ -35,12 +47,14 @@ function ShoppingCartUserDetails() {
             type="email"
             placeholder="Email"
             defaultValue="lalolanda@customer.com"
+            required
          />
          <Form.Label>Teléfono</Form.Label>
          <Form.Control
             type="text"
             placeholder="Nro. de Telefono"
             defaultValue="+54 9 11 5555-5555"
+            required
          />
          <div key="option-delivery" className="mb-3">
             <Form.Check 
@@ -71,6 +85,7 @@ function ShoppingCartUserDetails() {
                   type="text"
                   placeholder="Domicilio"
                   defaultValue="Avenida Siempreviva 742"
+                  required
                />   
             </>
          )}

@@ -19,17 +19,17 @@ nav{
    align-items: center;
    color: #27542ade;
    background-color: white;
-   border: none;
+   border: 0.5px solid #578b5be0;
    transition: 0.3s;
 }
 
 #user-profile:hover, #search-button:hover, #shop-cart:hover{
-   background-color: #578b5be0;
+   background-color: #27542ade;
    color: white;
 }
 
 #shop-cart{
-   width: 250px;
+   width: 200px;
 }
 
 #offcanvasNavbarDropdown{

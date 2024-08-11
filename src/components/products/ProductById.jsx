@@ -43,7 +43,7 @@ function ProductById() {
             <div className="product-details-info">
                <h1 className="product-details-info-title">{product.description}</h1>
                <div className="product-details-info-prices">
-                  <p>Precio Regular:</p><p className="product-details-info-price">${product.price}</p>
+                  <p>Precio Regular:</p><p className={`product-details-info-price ${product.isPromotion && 'product-details-info-price-through'}`}>${product.price}</p>
                   <p className="product-details-info-discount">{product.isPromotion && ( <>${product.promotionPrice}</>)}</p>
                </div>
                <ProductForm 

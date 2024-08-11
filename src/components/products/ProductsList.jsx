@@ -40,8 +40,7 @@ function ProductsList({ filter: propFilter }) {
       <div className='products-list'>
          <h1 className="products-title">{getFilter() === "isNewArrival" ? "Nuevos Ingresos" : "Promociones"}</h1>
          <Container>
-            {/* <Row xs sm={2} md={3} lg={4} xl={6} xxl={12}> */}
-            <Row>
+            <Row xs={1} sm={2} md={2} lg={2} xl={3} xxl={3} className='g-4'>
                {loading ? <p>Cargando...</p> : products.map((product) => (
                   <ProductCard
                      key={product.id}
@@ -50,6 +49,7 @@ function ProductsList({ filter: propFilter }) {
                      description={product.description}
                      image={`/products/img/${product.image}`}
                      className={"product-card-add-button"}
+                     promotionPrice={product.promotionPrice}
                   />
                ))
                }

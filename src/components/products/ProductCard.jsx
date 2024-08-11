@@ -5,7 +5,7 @@ import Column from 'react-bootstrap/Col';
 import ProductForm from './ProductForm';
 import { Link } from 'react-router-dom';
 
- function ProductCard({id, price, description, image}) {
+ function ProductCard({id, price, description, image, className, promotionPrice}) {
    return (
       <Column>
          <div className="product-card">
@@ -13,13 +13,14 @@ import { Link } from 'react-router-dom';
                <Link to={`/products/${id}`}><Card.Img className ="card-img" variant="top" src={image} /></Link>
                <Card.Body>
                   <Card.Title className='card-description'>{description}</Card.Title>
-                  <Card.Text className='card-price'>$ {price}</Card.Text>
+                  <Card.Text className={promotionPrice === 0 ? 'card-price' : 'card-price-through'}>$ {price}</Card.Text>
+                  {promotionPrice > 0 && <Card.Text className='card-promotion-price'>$ {promotionPrice}</Card.Text>}
                   <ProductForm 
                      id={id}
                      price={price}
                      description={description}
                      image={image}
-                     className={"product-card-add-button"}
+                     className={className}
                      />
                </Card.Body>
             </Card>

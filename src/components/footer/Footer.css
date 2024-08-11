@@ -1,18 +1,14 @@
 footer {
-   height: 45vh; 
+   height: 38%; 
    background-color: #91d2952a;
    width: 100%;
    color: #27542ade;
- }
-
- /* change in media query */
- /* height: 45vh;  */
-
+}
 
 .footer-content{
    display: flex;
    flex-direction: row;
-   align-items: flex-start;
+   align-items: center;
 }
 
 .footer-contacts{
@@ -23,6 +19,7 @@ footer {
    flex-direction: column;
    align-content: center;
    align-items: center;
+   margin-top: 2rem;
 }
 
 .footer-contacts-item{
@@ -31,7 +28,8 @@ footer {
    justify-content: center;
    align-items: center;
    padding: 1px;
-   gap: 10px;
+   margin-bottom: 1.5rem;
+   gap: 1rem;
 }
 
 .footer-contacts h3{
@@ -40,7 +38,6 @@ footer {
 }
 
 .footer-contacts li{
-   margin-top: 3rem;
    list-style: none;
 }
 
@@ -49,8 +46,8 @@ footer {
    color: #27542ade;
 }
 
-.footer-contacts i{
-   font-size: 2rem;
+.footer-contacts ul li{
+   font-size: 1.6rem;
 }
 
 .footer-schedule{
@@ -59,91 +56,180 @@ footer {
    justify-content: center;
    flex-direction: column;
    align-items: center;
-   width: 40%;
+   width: 35%;
+   margin-top: 2rem;
 }
 
-.footer-schedule h3{
-   font-size: 2rem;
-   margin-top: 3rem;
+#calendar{
+   width: 80%;
 }
 
-.footer-contacts ul li{
-   font-size: 1.6rem;
-}
-
-.footer-schedule table{
-   margin-top: 3rem;
-   width: 60%;
-}
-
-.footer-schedule table thead{
+#calendar thead{
    font-size: 1.5rem;
    text-align: center;
 }
 
-.footer-schedule table tbody{
-   font-size: 1.3rem;
+#calendar thead th{
+   background-color: #91d2952a;
+}
+
+#calendar tbody th,
+#calendar tbody tr td {
+   font-size: 1rem;
    text-align: center;
+   background-color: #91d2952a;
 }
 
 .table-success{
    font-weight: 700;
-}
-
-.footer-map h3{
-   margin-top: 3rem;
+   background-color: #49954ede;
+   color: white;
 }
 
 .footer-map {
    display: flex;
    justify-content: center;
-   margin-top: 3rem;
+   margin: 0rem 1rem;
+   margin-top: 2rem;
    width: 30%;
 }
 
-@media (max-width: 768px) {
+.payment-logos{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 2rem;
+   width: 20%;
+}
+
+.payment-logos img{
+   width: 70%;
+   margin-bottom: 0.5rem;
+   padding: 1rem;
+}
+
+@media (max-width: 766px) {
+
    .footer-content {
       flex-direction: column;
       align-items: center;
    }
 
-   .footer-contacts,
-   .footer-schedule,
-   .footer-map {
-      width: 100%;
-      margin-bottom: 2rem;
+   .footer-contacts ul li{
+      font-size: 1.2rem;
    }
 
-   .footer-contacts,
-   .footer-schedule,
-   .footer-map {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-   }
-
-   .footer-contacts-item {
-      margin-bottom: 1rem;
-      flex-direction: column;
-      align-items: center;
-   }
-
-   .footer-schedule table {
+   .payment-logos {
       width: 100%;
    }
 
-   .footer-schedule table thead,
-   .footer-schedule table tbody {
+   .payment-logos img{
+      width: 30%;
+      margin-bottom: 0.5rem;
+   }
+
+   .footer-schedule {
+      width: 100%;
+   }
+
+   #calendar{
+      width: 60%;
+   }
+
+   #calendar thead th,
+   #calendar tbody th,
+   #calendar tbody tr td {
       font-size: 1rem;
    }
 
    .footer-map {
-      width: 100%;
-      margin-top: 1rem;
+      margin: 1rem 0rem;
    }
 
    iframe {
-      width: 70%;
+      width: 100%;
+      height: 100%;
+   }
+}
+
+@media (min-width:767px) and (max-width: 1400px) {
+   .footer-contacts{
+      width: 20%;
+   }
+   
+   .footer-contacts ul li{
+      font-size: 1rem;
+   }
+
+   .footer-schedule {
+      width:35%;
+   }
+
+   #calendar{
+      width: 90%;
+   }
+
+   #calendar thead th,
+   #calendar tbody th,
+   #calendar tbody tr td {
+      font-size: 0.7rem;
+   }
+
+   .payment-logos {
+      width: 15%;
+   }
+
+   .payment-logos img{
+      width: 80%;
+   }
+
+    .footer-map {
+      width: 20%;
+      margin: 0rem 1rem
+   }
+
+   iframe {
+      width: 100%;
+      height: 100%;
+   }
+
+}
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+   .footer-contacts{
+      width: 20%;
+   }
+   
+   .footer-contacts ul li{
+      font-size: 1.3rem;
+   }
+
+   .footer-schedule {
+      width:40%;
+   }
+
+   #calendar thead th,
+   #calendar tbody th,
+   #calendar tbody tr td {
+      font-size: 0.9rem;
+   }
+
+   .payment-logos {
+      width: 20%;
+   }
+
+   .payment-logos img{
+      width: 80%;
+   }
+
+    .footer-map {
+      width: 30%;
+      margin: 0rem 1rem
+   }
+
+   iframe {
+      width: 100%;
       height: 100%;
    }
 }

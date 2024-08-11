@@ -13,8 +13,8 @@ import { useCart } from '../cart/CartProvider';
 function Navigation() {
    const { totalCost } = useCart();
    return (
-      <Navbar expand="sm" className=" mb-2 navigation">
-         <Container className="nav-container">
+      <Navbar expand="lg" className=" mb-2 navigation">
+         <Container className="nav-container" fluid>
             <Navbar.Brand href="/">Autoservicio Miguel Angel</Navbar.Brand>
             <Navbar.Toggle aria-controls="offcanvasNavbar" />
             <Navbar.Offcanvas
@@ -28,34 +28,35 @@ function Navigation() {
                   </Offcanvas.Title>
                </Offcanvas.Header>
                <Offcanvas.Body>
-                  <Nav className="justify-content-end flex-grow-1 pe-3">
+                  <Nav className="justify-content-flex-start flex-grow-1 pe-3">
                      <NavDropdown title="Productos" id="offcanvasNavbarDropdown">
                         <NavDropdown.Item className='dropdown-item' href="/products?filter=isPromotion">Promociones</NavDropdown.Item>
-                        <NavDropdown.Item href="/products?filter=isNewArrival">Recién llegado</NavDropdown.Item>
+                        <NavDropdown.Item href="/Products?filter=isNewArrival">Recién llegado</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="/products?category=oils">Aceites</NavDropdown.Item>
-                        <NavDropdown.Item href="/products?category=beverages">Bebidas</NavDropdown.Item>
-                        <NavDropdown.Item href="/products?category=meats">Carnicería</NavDropdown.Item>
-                        <NavDropdown.Item href="/products?category=cleaning">Limpieza</NavDropdown.Item>
+                        <NavDropdown.Item href="/Products/category/aceites">Aceites</NavDropdown.Item>
+                        <NavDropdown.Item href="/Products/category/bebidas">Bebidas</NavDropdown.Item>
+                        <NavDropdown.Item href="/Products/category/carniceria">Carnicería</NavDropdown.Item>
+                        <NavDropdown.Item href="/Products/category/limpieza">Limpieza</NavDropdown.Item>
                      </NavDropdown>
                      <Nav.Link href="/orders">Pedidos</Nav.Link>
                   </Nav>
                   <Form className="d-flex">
                      <Form.Control
+                        disabled
                         type="search"
                         placeholder="Buscar"
                         className="me-2"
                         aria-label="Search"
                      />
-                     <Button id="search-button" /*variant="outline-success"*/>
-                        <FontAwesomeIcon size="xl" icon={faMagnifyingGlass} />
+                     <Button disabled id="search-button" /*variant="outline-success"*/>
+                        <FontAwesomeIcon size="lg" icon={faMagnifyingGlass} />
                      </Button>
                   </Form>
                   <Button href="/shoppingCart" id="shop-cart" /*className="mx-2" /*variant="outline-success"*/>
-                     <FontAwesomeIcon size="xl" icon={faCartShopping} />${totalCost}
+                     <FontAwesomeIcon size="lg" icon={faCartShopping} />${totalCost}
                   </Button>
-                  <Button href="/profile" id="user-profile" /*className="mx-2" /*variant="outline-success"*/>
-                     <FontAwesomeIcon size="xl" icon={faUser} />
+                  <Button href="/userprofile" id="user-profile" /*className="mx-2" /*variant="outline-success"*/>
+                     <FontAwesomeIcon size="lg" icon={faUser} />
                   </Button>
                </Offcanvas.Body>
             </Navbar.Offcanvas>

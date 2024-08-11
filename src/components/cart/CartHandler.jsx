@@ -55,7 +55,6 @@ function CartHandler({id, price, description, image, qty: initialQty, onQuantity
             <Form.Control
                type="number"
                value={qty}
-               className="product-card-form-control"
                id="cart-qty"
                min={1}
                max={100}
@@ -63,10 +62,10 @@ function CartHandler({id, price, description, image, qty: initialQty, onQuantity
             />
          <div className="product-card-form-buttons">
             <Button className="btn btn-success cart-button" onClick={handleAddClick} >
-               <FontAwesomeIcon size="xl" icon={faCheck} />
+               <FontAwesomeIcon size="lg" icon={faCheck} />
             </Button>
             <Button className="btn btn-danger cart-button" onClick={handleRemoveClick} >
-               <FontAwesomeIcon size="xl" icon={faTrash} />
+               <FontAwesomeIcon size="lg" icon={faTrash} />
             </Button>
          </div>
          </div>

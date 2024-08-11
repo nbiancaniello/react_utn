@@ -4,31 +4,30 @@ import { useCart } from '../cart/CartProvider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faShopSlash} from '@fortawesome/free-solid-svg-icons/faShopSlash';
 import HorizontalRule from './HorizontalRule';
+import Button from 'react-bootstrap/Button';
 
 const ShoppingCart = () => {
   const { items, totalCost } = useCart(); 
 
   return (
-    <>
-      <h2> Carrito de Compras </h2>
-      <div className='shopping-cart'>
-          {items.length === 0 &&
-          <div className='empty-cart'>
-            <FontAwesomeIcon size='10x' icon={faShopSlash} />
-            <p>No hay items en el carrito</p>
-          </div>}
-          {items.map((item) => (
-            <ShoppingCartItem key={item.id} id={item.id} description={item.description} price={item.price} qty={item.qty} image={item.image} />
-          ))
-          
-          }
-          {items.length !== 0 &&
-          <HorizontalRule/>}
-          {items.length !== 0 && 
-          <p className='shopping-cart-total'>Total: ${totalCost}</p>}
-      </div>
-    </>
-    
+    <div className='shopping-cart'>
+        <h2> Carrito de Compras </h2>
+        {items.length === 0 &&
+        <div className='empty-cart'>
+          <FontAwesomeIcon size='10x' icon={faShopSlash} />
+          <p>No hay items en el carrito</p>
+        </div>}
+        {items.map((item) => (
+          <ShoppingCartItem key={item.id} id={item.id} description={item.description} price={item.price} qty={item.qty} image={item.image} />
+        ))}
+        {items.length !== 0 &&
+        <div>
+          <HorizontalRule/>
+          <p className='shopping-cart-total'>Total: ${totalCost}</p>
+          <Button href='/ShoppingCartUserDetails' id='shopping-cart-accept-button'>Continuar Compra</Button>
+        </div>
+        }
+    </div>
   );
 };
 

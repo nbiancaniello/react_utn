@@ -16,7 +16,6 @@ function Schedule() {
 
    return (
       <div className="footer-schedule">
-         <h3>Horario de Atención</h3>
          <table id="calendar" className="table">
             <thead>
                <tr>

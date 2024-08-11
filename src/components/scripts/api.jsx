@@ -47,3 +47,20 @@ export const fetchProductsById = async (id) => {
       return;
    }
 }
+
+export const fetchProductsByCategory = async (category) => {
+   const BASE_URL = '/products/data/products.json';
+   try {
+      const response = await fetch(BASE_URL);
+      if (!response.ok) {
+         throw new Error(`Error: ${response.status}`);
+      }
+      const data = await response.json();
+      const products = data.products.filter(product => product.category.split(',').includes(category));
+      return products;
+
+   } catch (error) {
+      console.error(error);
+      return;
+   }
+}

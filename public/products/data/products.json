@@ -6,10 +6,9 @@
       "price": 2400,
       "image": "two-liter-bottle-of-coca-cola.jpg",
       "isPromotion": true,
-      "promotionPrice": 1800,
+      "promotionPrice": 2200,
       "isNewArrival": false,
-      "category": "beverages"
-
+      "category": "bebidas"
     },
     {
       "id": 2,
@@ -17,9 +16,9 @@
       "price": 2300,
       "image": "aceite-natura-litre-half.webp",
       "isPromotion": true,
-      "promotionPrice": 1800,
+      "promotionPrice": 2100,
       "isNewArrival": false,
-      "category": "oils"
+      "category": "aceites"
     },
     {
       "id": 3,
@@ -27,9 +26,9 @@
       "price": 2300,
       "image": "cerveza-patagonia-730cc.webp",
       "isPromotion": true,
-      "promotionPrice": 1800,
+      "promotionPrice": 2000,
       "isNewArrival": false,
-      "category": "beverages"
+      "category": "bebidas"
     },
     {
       "id": 4,
@@ -37,9 +36,9 @@
       "price": 2300,
       "image": "rollo-cocina-sussex-x3.webp",
       "isPromotion": true,
-      "promotionPrice": 1800,
+      "promotionPrice": 1900,
       "isNewArrival": false,
-      "category": "cleaning"
+      "category": "limpieza"
     },
     {
       "id": 5,
@@ -47,9 +46,9 @@
       "price": 4500,
       "image": "DOLCA_170G_.webp",
       "isPromotion": true,
-      "promotionPrice": 1800,
+      "promotionPrice": 4300,
       "isNewArrival": false,
-      "category": "infusions"
+      "category": "infusiones"
     },
     {
       "id": 6,
@@ -57,9 +56,9 @@
       "price": 3500,
       "image": "Atun-natural-la-campagnola.webp",
       "isPromotion": true,
-      "promotionPrice": 1800,
+      "promotionPrice": 3400,
       "isNewArrival": false,
-      "category": "meats"
+      "category": "pescados,enlatados"
     },
     {
       "id": 7,
@@ -69,7 +68,7 @@
       "isPromotion": false,
       "promotionPrice": 0,
       "isNewArrival": true,
-      "category": "meats"
+      "category": "carniceria"
     },
     {
       "id": 8,
@@ -79,7 +78,7 @@
       "isPromotion": false,
       "promotionPrice": 0,
       "isNewArrival": true,
-      "category": "meats"
+      "category": "carniceria"
     },
     {
       "id": 9,
@@ -89,7 +88,7 @@
       "isPromotion": false,
       "promotionPrice": 0,
       "isNewArrival": true,
-      "category": "meats"
+      "category": "carniceria"
     }
   ]
 }

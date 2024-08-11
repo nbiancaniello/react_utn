@@ -1,0 +1,21 @@
+#user-details{
+   display: flex;
+   flex-direction: column;
+   padding: 1rem;
+   border: 1px solid rgba(8, 71, 17, 0.295);
+   border-radius: 10px;
+}
+
+#user-details label{
+   font-weight: 700;
+   color: #27542ade;
+   padding: 0.4rem;
+}
+
+#user-details input{
+   font-weight: 00;
+   border: 1px solid rgba(8, 71, 17, 0.295);
+   border-radius: 10px;
+   padding: 0.5rem;
+   margin-bottom: 0.4rem;
+}

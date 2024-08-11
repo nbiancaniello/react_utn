@@ -4,7 +4,6 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
 function Contact() {
    return (
       <div className="col footer-contacts">
-         <h3>Contacto</h3>
          <ul>
             <li className='footer-contacts-item'>
                <FontAwesomeIcon size="xl" icon={faPhone} />

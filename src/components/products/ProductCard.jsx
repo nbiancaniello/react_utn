@@ -21,6 +21,7 @@ import { Link } from 'react-router-dom';
                      description={description}
                      image={image}
                      className={className}
+                     promotionPrice={promotionPrice}
                      />
                </Card.Body>
             </Card>

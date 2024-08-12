@@ -7,7 +7,7 @@ import { faCheck, faTrash } from '@fortawesome/free-solid-svg-icons';
 import './Cart.css';
 
 // eslint-disable-next-line react/prop-types
-function CartHandler({id, price, description, image, qty: initialQty, onQuantityChange}) {
+function CartHandler({id, price, description, image, qty: initialQty, onQuantityChange, promotionPrice}) {
    const [qty, setQty] = useState(initialQty ||1);
    const { addItem, deleteItem } = useCart();
 
@@ -23,7 +23,7 @@ function CartHandler({id, price, description, image, qty: initialQty, onQuantity
    const handleAddClick = (event) => {
       event.preventDefault(); // Prevent default form behavior
       if (typeof addItem === 'function') {
-         addItem(id, description, price, qty, image);
+         addItem(id, description, promotionPrice > 0 ? promotionPrice : price, qty, image);
          if (onQuantityChange) {
             onQuantityChange(qty);
          }

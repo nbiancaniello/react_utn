@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import CartHandler from '../cart/CartHandler';
 
 // eslint-disable-next-line react/prop-types
-function ProductForm({id, price, description, image, className}) {
+function ProductForm({id, price, description, image, className, promotionPrice}) {
    const [visible, setVisible] = useState(false);
 
    const handleClickbAddRemoveButton = () => {
@@ -26,7 +26,7 @@ function ProductForm({id, price, description, image, className}) {
          }
 
          {visible && (
-            <CartHandler id={id} description={description} price={price} image={image} onQuantityChange={handleVisibilityChange} />
+            <CartHandler id={id} description={description} price={price} image={image} onQuantityChange={handleVisibilityChange} promotionPrice={promotionPrice}/>
 
          )}
       </div>

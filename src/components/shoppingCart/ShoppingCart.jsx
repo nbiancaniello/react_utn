@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faShopSlash} from '@fortawesome/free-solid-svg-icons/faShopSlash';
 import HorizontalRule from './HorizontalRule';
 import Button from 'react-bootstrap/Button';
+import {Link} from 'react-router-dom';
 
 const ShoppingCart = () => {
   const { items, totalCost } = useCart(); 
@@ -24,7 +25,10 @@ const ShoppingCart = () => {
         <div>
           <HorizontalRule/>
           <p className='shopping-cart-total'>Total: ${totalCost}</p>
-          <Button href='/ShoppingCartUserDetails' id='shopping-cart-accept-button'>Continuar Compra</Button>
+          <Link to="/ShoppingCartUserDetails">
+              <Button id="shopping-cart-accept-button" >Continuar Compra</Button>
+          </Link>
+          {/* <Button href='/ShoppingCartUserDetails' id='shopping-cart-accept-button'>Continuar Compra</Button> */}
         </div>
         }
     </div>

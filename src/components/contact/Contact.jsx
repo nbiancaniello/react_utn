@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import {Link} from 'react-router-dom';
 function Contact() {
    return (
       <div className="col footer-contacts">
@@ -15,12 +16,11 @@ function Contact() {
             </li>
             <li className='footer-contacts-item'>
                <FontAwesomeIcon size="xl" icon={faInstagram} />
-               <p><a href="https://www.instagram.com/autoserviciomiguelangel/"> autoserviciomiguelangel</a>
-               </p>
+               <p><Link to={"https://www.instagram.com/autoserviciomiguelangel/"}>autoserviciomiguelangel</Link></p>
             </li>
          </ul>
       </div>
    );
-};
+}
 
 export default Contact;

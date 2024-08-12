@@ -2,6 +2,7 @@ import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
 import { useState } from 'react';
 import { useCart } from '../cart/CartProvider';
+import {Link} from 'react-router-dom';
 function ShoppingCartUserDetails() {
    const[selectedOption, setSelectedOption] = useState('option-delivery');
    const { emptyCart } = useCart();
@@ -90,7 +91,10 @@ function ShoppingCartUserDetails() {
             </>
          )}
          
-         <Button href='/ShoppingCartConfirmation' id='shopping-cart-end-button' onClick={handleFormSubmit}>Finalizar Compra</Button>
+         <Link to="/ShoppingCartConfirmation">
+              <Button id="shopping-cart-end-button" onClick={handleFormSubmit}>Finalizar Compra</Button>
+          </Link>
+         {/* <Button href='/ShoppingCartConfirmation' id='shopping-cart-end-button' onClick={handleFormSubmit}>Finalizar Compra</Button> */}
       </Form>
    );
 } 
